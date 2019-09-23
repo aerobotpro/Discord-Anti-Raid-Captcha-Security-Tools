@@ -12,7 +12,7 @@ class settings:
     welcome_channel = 624826440176762887 # < <  < Channel ID here <--
     rich_presence = f"{prefix}help || http://aero-bot.pro" #Activity Context: Watching
     captcha_image_big = "https://cdn.discordapp.com/attachments/610035652112810024/614966581499265026/aero.png"
-    Token = "NjI1NTM2MjkyNjMzMDUxMTM3.XYhVFg.bKx8IQmuWHTPANoEVYQL6pz_9ag"
+    Token = "NjI1NTM2MjkyNjMzMDUxMTM3.XYhVFg.bKx8IQmuWHTPANoEVYQL6pz_9ga"
     #
     #   >>>>>>>You Dont Need To Change Aything Below HERE Unless You Know What You're Doing!!!!!!<<<<<<<<
     #
