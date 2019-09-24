@@ -19,7 +19,7 @@ class settings:
     prefix = "&&" # < < SET YOUR COMMAND PREFIX <--
     rich_presence = f"{prefix}help || http://aero-bot.pro" #(Activity Context: "Watching [" "]")
     captcha_image_big = "https://cdn.discordapp.com/attachments/610035652112810024/614966581499265026/aero.png"
-    ##### DONT USE EMOJIS IN SOME IDE (including Idle) as they can CAUSE CRASH|!!
+    ##### DONT USE EMOJIS IN SOME IDE (including Idle) as they can CAUSE CRASH !!!
     welcome_emote_1 = "" #< Paste Emote
     welcome_emote_2 = "" #< Paste Emote
     mag_glass_user_emote = ""#< Paste Emote
