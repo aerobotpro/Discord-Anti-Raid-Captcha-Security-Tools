@@ -1,60 +1,26 @@
 <html><head><title>E-ZCaptcha Docs | aero-bot.pro</title></head><body>
-<h1><u>E-ZCaptcha</u> - Documentation</h1>
-<h2>Discord Security /Verificaton Captcha Solution</h3><p><u><i>A Project By Aero-Bot</u></i>
-<br><br><p><b><u>This Documentation</u></b> will be a basic run-around to get you on your way<br>
-so you can get your server locked down from Raiders & Bots asap!<br>
--------------------------------------------------------------------------------------------
-<br><br><u><b>What you'll need?</b></u><br><br>
+<h1><u>E-ZCaptcha</u> - Documentation</h1><h2>Discord Security /Verificaton Captcha Solution</h3><p><u><i>A Project By Aero-Bot</u></i>
+<br><br><p><b><u>This Documentation</u></b> will be a basic run-around to get you on your way<br>so you can get your server locked down from Raiders & Bots asap!<br>
+-------------------------------------------------------------------------------------------<br><br><u><b>What you'll need?</b></u><br><br>
 -PC/Server | Linux/Windows/Mac, no mips/unix/etc<br><br>-<a href="https://www.python.org/downloads/release/python-374/"<b>Python3.6</b></a> or higher, must have pip3/pip as well! <img src="https://cdn.discordapp.com/attachments/610035652112810024/625816163934535699/323.jpg"><br><br>
 -Admin Permissions on a Discord Server<br><br>-High Data Ceiling/No Usage Rates - Bots Cost HUGE Bandwidth!!!!!!<br>
 -------------------------------------------------------------------------------------------
-<br><br><b>Join <a href="https://discord.gg/xjurNMh">My Discord Server</a> For Any Help Or Just Cause!</b>
-<br><br>
-<u><b>Getting Token:</b></u>
-<br><br>
+<br><br><b>Join <a href="https://discord.gg/xjurNMh">My Discord Server</a> For Any Help Or Just Cause!</b><br><br><u><b>Getting Token:</b></u><br><br>
 Head over to <a href="https://discordapp.com/developers/applications/">Discord's Developer Portal</a> and create a new application.<br>
-There's <b>A TON</b> of Tutorials therefore I'm not going into how to create an app.<br>
-Once you've gotten a valid token from your new bot application and<br>the bot in your server, paste Token in 
-<b>line 14</b> of ez_captcha.py. <br>-------------------------------------------------------------------------------------------<br>
-
-<u><b>Setting Up Server:</b></u><br><br>
-<i>This system relys on @everone Role having NO PERMS beside viewing the "Verification Channel"<br>Nothing Else...!!!!</i><br><br>
-<u>Role:</u>
-<br>
+There's <b>A TON</b> of Tutorials therefore I'm not going into how to create an app.<br>Once you've gotten a valid token from your new bot application and<br>the bot in your server, paste Token in 
+<b>line 14</b> of ez_captcha.py. <br>-------------------------------------------------------------------------------------------<br><u><b>Setting Up Server:</b></u><br><br>
+<i>This system relys on @everone Role having NO PERMS beside viewing the "Verification Channel"<br>Nothing Else...!!!!</i><br><br><u>Role:</u><br>
 You'll need to create a role that <b><u>every</u></b> member needs in order to use server/channels.<br>
-This Role will be automatically assigned to new members who complete the captcha.<br>
-This role needs to be made now, then copy the ID into <u><b>Line 11 of ez_captcha.py.</b></u><br>
-<i>See "Getting ID's"* (below)</i>
-<br>
-
-
-<br>
-
-<u>Channels:</u><br>
-Next, we need to make 2 new channels:<br>
+This Role will be automatically assigned to new members who complete the captcha.<br>This role needs to be made now, then copy the ID into <u><b>Line 11 of ez_captcha.py.</b></u><br>
+<i>See "Getting ID's"* (below)</i><br><br><u>Channels:</u><br>Next, we need to make 2 new channels:<br>
 - One, [Verification Channel], that <b>only @everyone can see.</b><br>This will  be where new users are verified<br><br>
 - Two, [Welcome Channel], that <b>all memebers can see.</b><br>This channel will recieve notifications when a new user<br>
 has been verified and is typically done in the "Main Chat".
-<br>-------------------------------------------------------------------------------------------<br>
-
-<u><b>Gettings ID's:<br></b></u><br>
+<br>-------------------------------------------------------------------------------------------<br><u><b>Gettings ID's:<br></b></u><br>
 Next, head over to your Discord Server as we'll need to get some required info.<br>Go to <b>User Settings</b> > <b>Appearance </b>
-then <b>Enable Developer Mode</b>.
-<br><br>
-To pull an object ID or "Snowflake ID",<br>
-we'll right-click on, for instance, a user/channel name, which , if dev-mode enabled<br>
-will show <b>Copy ID</b> at the dropdown. Take these ID's and drop them in<br>
-<i>ez_captcha.py</i> in the correct locations as directed in the source.<br>
-<img src="https://cdn.discordapp.com/attachments/610035652112810024/625815288473976861/323.jpg">
-<br>-------------------------------------------------------------------------------------------
-<br>
-<u><b>Extras:</b><br></u><br>
-I've added a logging option which can be enabled in <b><u>line 31.</u></b><br>Essentially you just need to provide a channel ID.
-<br><br>
-Also,<br>
-I'm thinking about implementing Pyinstaller or Cython.<br>If the script self-Compiles, I've made it happen since I've written this :>
-</p>
-
-</body>
-<footer></footer>
-</html>
+then <b>Enable Developer Mode</b>.<br><br>To pull an object ID or "Snowflake ID",<br>
+we'll right-click on, for instance, a user/channel name, which , if dev-mode enabled<br>will show <b>Copy ID</b> at the dropdown. Take these ID's and drop them in<br>
+<i>ez_captcha.py</i> in the correct locations as directed in the source.<br><img src="https://cdn.discordapp.com/attachments/610035652112810024/625815288473976861/323.jpg">
+<br>-------------------------------------------------------------------------------------------<br><u><b>Extras:</b><br></u><br>
+I've added a logging option which can be enabled in <b><u>line 31.</u></b><br>Essentially you just need to provide a channel ID.<br><br>Also,<br>
+I'm thinking about implementing Pyinstaller or Cython.<br>If the script self-Compiles, I've made it happen since I've written this :></p></body><footer></footer></html>
