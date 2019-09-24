@@ -14,4 +14,4 @@ if compiled == True:
     nu_file = str(file.replace("py", "exe"))
     print(f"\nSuccess! Binary located @ {this_dir}\\dist\\{nu_file}")
 else:
-    wait = input('\n\nFailed! Mash Any Key To Exit')
+    wait1 = input('\n\nFailed! Mash Any Key To Exit')
