@@ -11,14 +11,13 @@ class settings:
     verified_role_given = 000000000000000000 # < <  < Role ID here <--                                                                                         <-----------|REQUIRED|
     verification_channel = 000000000000000000# < <  < Channel ID here <--                                                                                  <----------|REQUIRED|
     welcome_channel = 000000000000000000 # < <  < Channel ID here <--                                                                                      <----------|REQUIRED|
-    Token = "NjI1NTM2MjkyNjMzMDUxMTM3.XYlTpA.wxfXKM6uKiPLffskYkS_TryoCL I" # Your token goes here <<     <----------|REQUIRED|
+    Token = "NjI1NTM2MjkyNjMzMDUxMTM3.XYlTpA.wxfXKM6uKiPLffskYkS_" # Your token goes here <<     <----------|REQUIRED|
     ############################################################################################################
-    
     
     #Aesthetics >
     ############################################################################################################
     prefix = "&&" # < < SET YOUR COMMAND PREFIX <--
-    rich_presence = f"{prefix}help || http://aero-bot.pro" #Activity Context: Watching
+    rich_presence = f"{prefix}help || http://aero-bot.pro" #(Activity Context: "Watching [" "]")
     captcha_image_big = "https://cdn.discordapp.com/attachments/610035652112810024/614966581499265026/aero.png"
     ##### DONT USE EMOJIS IN SOME IDE (including Idle) as they can CAUSE CRASH|!!
     welcome_emote_1 = "" #< Paste Emote
@@ -28,30 +27,28 @@ class settings:
     
     #Logging >
     ############################################################################################################
-    error_log_channel = 000000000000000000 #Option to send errors/important stuff to a channel. < Channel ID here <-
+    error_log_channel = 000000000000000000 #Option to send errors/important stuff to a channel. < Channel ID here <--
     error_log_channel_enabled = 0 # CHANGE TO 1 TO ENABLE LOGGING TO A DISCORD CHANNEL WITHIN YOUR GUILD!
     ############################################################################################################
 
-    
+    #Binary >
     ############################################################################################################
-    exe = 0
-    #Option to Compile Self as an Executable @ runtime, may speed up operations.
-    #will add cython support as well 
+    #Use "build_executable.py" to build binary.
+    #Executable @ runtime, may speed up operations.
+    #I will add cython support as well 
     ############################################################################################################
-
-
-
-
-
-
-
 
     
+
+
+
 ##############################################################################################################
-import time
-from os import name, system
+from time import sleep
+from os import system
 from sys import argv
 from subprocess import PIPE, run
+
+
 
 try: 
     import discord
@@ -59,29 +56,27 @@ except Exception as E:
     installed = False
     print(str(E))
     try:
-        stack = ['pip3', 'install', 'discord', 'pyinstaller']
+        stack = ['pip3', 'install', 'discord']
         run(stack)
         installed = True
     except Exception as EE:
         installed = False
         print(str(EE))
         try:
-            print("Trying ALT PATH...");time.sleep(5)
+            print("Trying ALT PATH...");sleep(5)
             stack[0] = str(stack[0].replace("3",""))
             run(stack)
             installed = True
         except Exception as e:
             print(str(e))
-            time.sleep(5)
-    if name == 'nt': _ = system('cls')
-    else: _ = system('clear')
+            sleep(5)
     if installed == True:
         print('\nSuccessfully Installed Discord Official API!')
-        time.sleep(1)
+        sleep(1)
     else:
-        print('\nCould Not Install Discord Official API!!!\nMaybe This Will Help ;) \n\nhttps://appuals.com/fix-pip-is-not-recognized-as-an-internal-or-external-command/#targetText='
+        print('\nCould Not PIP Install Discord Official API!!!\nMaybe This Will Help ;) \n\nhttps://appuals.com/fix-pip-is-not-recognized-as-an-internal-or-external-command/#targetText='
               'Then%2C%20type%20%E2%80%9Ccmd%E2%80%9D%20and,present%20in%20the%20PATH%20variable\nOr Try Manually Installing "discord" Module / "pyinstaller"\n\nExiting...')
-        time.sleep(5)
+        sleep(5)
         exit(0)
 
 
@@ -93,40 +88,7 @@ from os import remove, getcwd
 from io import StringIO
 from random import randint, choice
 
-if settings.exe != 0 and "py" in argv[0]:
-    try:
-        stack = ['pyinstaller', '-F', argv[0]]
-        run(stack)
-        compiled = True
-    except Exception as Ee:
-        print(str(Ee))
-        compiled = False
-        time.sleep(5)
-    if compiled == True:
-        worked = False
-        this_dir = str(getcwd())
-        print("Trying To Start Executable...If failed, binary located @ {this_dir}\\dist\\"+str(str(argv[0]).replace("py", "exe")))
-        if name == 'nt':
-            _ = system("dist\\"+str(str(argv[0]).replace("py", "exe")))
-            worked = True    
-        else:
-            if worked != True:
-                try:
-                    _ = system('python3 dist \\'+str(str(argv[0]).remove(".py", "")))
-                except Exception as eE:
-                    print(str(eE))
-                    try:
-                        _ = system('python3.6 \\'+str(argv[0]).remove(".py", ""))
-                    except Exception as eEq:
-                        print(str(eEq))
-                        time.sleep(.5)
-                        print("Failed To Start Binary!!!!!!! Try Again!..??..!\n\nUNCHECK [] TO AVOID ANOTHER FAILED RUN!!!!!")
-                        time.sleep(10)
 
-    else:
-        print("Failed To Spin Binary!!!!!!! Try Again!..??..!\n\nUNCHECK [] TO AVOID ANOTHER FAILED BINARY!!!!!")
-        time.sleep(10)
-        exit(0)
 print("\nStarting Service - Standby For Login Message!", end="")
 
     
@@ -165,14 +127,14 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.author == client.user:
-        #await message.add_reaction(settings.mag_glass_user_emote)
+        #await message.add_reaction(settings.mag_glass_user_emote) #spammy
         return
 
     global count, bot_count
     count += 1
     if message.author.bot == True:
         bot_count += 1 
-        #await message.add_reaction('BOT_EMOJI_HERE')
+        #await message.add_reaction('BOT_EMOJI_HERE') #spammy
         
             
             
@@ -243,7 +205,7 @@ async def on_message(message):
                 
                 
                 
-#### IP LOGGER DETECTION 1.0 By Aero ###################################
+#### IP LOGGER DETECTION ###################################
 
                 
 #Possible Loggers
@@ -345,12 +307,14 @@ async def on_message(message):
         await message.channel.send(f"\n**Hello, {message.author}.\n{strings.help_text}**")
 
 class colors:
-    colors = [0x860111,#Devil Red
-    0x00FF00,#Lime
-    0x041C4B,#Blue
-    0xB723A5,#Pink
-    0xECBF1B,#Goldish
-    0xF05C15]#Orange    
+    colors = [
+    0x860111,
+    0x00FF00,
+    0x041C4B,
+    0xB723A5,
+    0xECBF1B,
+    0xF05C15
+              ]   
 
 class chars:
     chars = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v', 
