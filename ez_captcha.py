@@ -28,7 +28,7 @@ class settings:
     
     #Logging >
     ############################################################################################################
-    error_log_channel = 000000000000000000 #Option to send errors/important stuff to a channel. < Channel ID here <--
+    error_log_channel = 000000000000000000 #Option to send errors/important stuff to a channel. < Channel ID here <-
     error_log_channel_enabled = 0 # CHANGE TO 1 TO ENABLE LOGGING TO A DISCORD CHANNEL WITHIN YOUR GUILD!
     ############################################################################################################
 
