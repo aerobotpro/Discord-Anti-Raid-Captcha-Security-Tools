@@ -36,7 +36,7 @@ class settings:
     #Use "build_executable.py" to build binary.
     #Executable @ runtime, may speed up operations.
     #I will add cython support as well 
-    #Use `get_color_hex()` in-place of the hex colors in the embeds for random colors:)
+    #Use `get_color_hex()` in-place of the hex colors in the embeds for random colors
     ############################################################################################################
 
     
