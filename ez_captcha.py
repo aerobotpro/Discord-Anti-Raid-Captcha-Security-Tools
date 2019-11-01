@@ -36,6 +36,7 @@ class settings:
     #Use "build_executable.py" to build binary.
     #Executable @ runtime, may speed up operations.
     #I will add cython support as well 
+    #Use `get_color_hex()` in-place of the hex colors in the embeds for random colors:)
     ############################################################################################################
 
     
@@ -47,6 +48,7 @@ from time import sleep
 from os import system
 from sys import argv
 from subprocess import PIPE, run
+from random import choice
 
 
 
@@ -314,8 +316,10 @@ class colors:
     0xB723A5,
     0xECBF1B,
     0xF05C15
-              ]   
-
+              ]
+    def get_color_hex():
+        return choice(colors)
+    
 class chars:
     chars = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v', 
     'w','x','y','z','1','2','3','4','5','6','7','8','9','!','$','%','^','*','(',')','-','_','=','+','/',
